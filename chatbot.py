@@ -9,7 +9,7 @@ import os
 
 # Load environment variables
 load_dotenv()
-groq_api_key = os.getenv("ai")
+groq_api_key = st.secrets["GROQ_API_KEY"]
 # Initialize the model (make sure it's a medically fine-tuned model or use a prompt specifically for medical advice)
 model = ChatGroq(model="Gemma2-9b-It", groq_api_key=groq_api_key)
 
